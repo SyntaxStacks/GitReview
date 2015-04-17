@@ -34,6 +34,8 @@ git remote add upstream <main_repo_url>
 ##Setting master to track upstream master
 To get the latest changes from the upstream project we will set master to track the upstream master branch
 ```
+# fetch the latest changes
+git fetch --all
 git branch -u upstream/master master
 ```
 
