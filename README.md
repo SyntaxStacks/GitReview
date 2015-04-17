@@ -4,6 +4,8 @@
 
 * Forking a repo
 * Cloning your fork
+* Adding the upstream remote 
+* Setting master to track upstream master
 * Creating a branch
 * Commit a change to a file
 * Commit a new file
@@ -15,7 +17,7 @@
 
 Forking a repo creates a duplicate repo that is independent from the original
 project. You can code without fear of impacting the code base. To create a
-fork, click the "fork" button in hte top right hand corner of the repo page.
+fork, click the "fork" button in the top right hand corner of the repo page.
 [img]
 
 ##Cloning your fork
@@ -24,10 +26,20 @@ The following command can be used to clone your fork to your local machine.
 ```
 git clone <repository_url>
 ```
+##Adding the upstream remote 
+```
+git remote add upstream <main_repo_url>
+```
+
+##Setting master to track upstream master
+To get the latest changes from the upstream project we will set master to track the upstream master branch
+```
+git branch -u upstream/master master
+```
 
 ##Creating a branch
 
-After cloning your fork you will be on the master branch. Create a branch with
+Now that our master branch is pointing at upstream/master, we can create a branch with
 the following command:
 ```
 #Create a branch
@@ -90,5 +102,5 @@ git push origin <branch_name>
 
 ##Creating a Pull Request
 
-We can create a pull request in Github. Pull requests are used for code review
+We can create a pull request in Github from the main repository. Pull requests are used for code review
 before we merge new changes into the master branch of the main repository. 
